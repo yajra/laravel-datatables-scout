@@ -12,6 +12,8 @@ This package is a plugin of [Laravel DataTables](https://github.com/yajra/larave
 ## Requirements
 - [PHP >=7.0](http://php.net/)
 - [Laravel 5.4|5.5](https://github.com/laravel/framework)
+- [Laravel Scout](https://github.com/laravel/scout)
+- [Laravel DataTables](https://github.com/yajra/laravel-datatables)
 - [jQuery DataTables v1.10.x](http://datatables.net/)
 
 ## Documentations
@@ -22,12 +24,34 @@ This package is a plugin of [Laravel DataTables](https://github.com/yajra/larave
 
 ## Usage
 
+### Use the dataTable class directly.
+
 ```php
 use Yajra\DataTables\ScoutDataTable;
 
 $model = new App\User;
 
 return (new ScoutDataTable($model))->toJson()
+```
+
+### Use via trait.
+1. You need to use `ScoutDataTable` trait on your model.
+
+```php
+use Yajra\DataTables\Traits\ScoutDataTable;
+
+class User extends Model
+{
+	use ScoutDataTable;
+}
+```
+
+2. Process dataTable directly from your model.
+
+```php
+Route::get('users/data', function() {
+	return User::dataTable()->toJson();
+});
 ```
 
 ## Contributing
