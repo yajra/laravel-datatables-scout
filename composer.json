@@ -1,0 +1,42 @@
+{
+  "name": "yajra/laravel-datatables-scout",
+  "description": "Laravel DataTables Scout Plugin.",
+  "keywords": [
+    "laravel",
+    "datatables",
+    "scout",
+    "plugin"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Arjay Angeles",
+      "email": "aqangeles@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "yajra/laravel-datatables-oracle": "8.*",
+    "laravel/scout": "^3.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "~3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Yajra\\DataTables\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Yajra\\DataTables\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
