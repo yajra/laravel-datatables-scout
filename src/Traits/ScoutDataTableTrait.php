@@ -2,10 +2,14 @@
 
 namespace Yajra\DataTables\Traits;
 
+use Yajra\DataTables\ScoutDataTable;
+
 trait ScoutDataTableTrait
 {
     /**
-     * @return \Illuminate\Http\JsonResponse
+     * Get Scout DataTable instance for a model.
+     *
+     * @return ScoutDataTable
      */
     public static function dataTable()
     {
